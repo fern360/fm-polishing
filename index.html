@@ -149,6 +149,13 @@ footer .info strong{color:var(--ink-fg);font-weight:600}
 .panel.photo{min-height:0;background:var(--ink);display:block}
 .panel.photo::before,.panel.photo::after{display:none}
 .panel.photo img{width:100%;height:clamp(260px,44vw,540px);object-fit:cover;object-position:center 58%;display:block}
+.visit{border-top:1px solid var(--line)}
+.map{position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface);aspect-ratio:16/7;max-width:100%}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.map-fallback{position:absolute;inset:0;display:grid;place-content:center;gap:4px;text-align:center;color:var(--muted)}
+.map-fallback strong{color:var(--fg);font-stretch:125%;text-transform:uppercase;letter-spacing:.06em}
+.map-cta{margin-top:20px}
+@media (max-width:700px){.map{aspect-ratio:4/3}}
 </style>
 
 <nav>
@@ -157,6 +164,7 @@ footer .info strong{color:var(--ink-fg);font-weight:600}
     <div class="navlinks">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
+      <a href="#location">Location</a>
       <a href="#contact">Get a quote</a>
     </div>
   </div>
@@ -244,6 +252,24 @@ footer .info strong{color:var(--ink-fg);font-weight:600}
         <span class="mini"><a class="btn sm primary" href="tel:+17026519999">Call</a><a class="btn sm" href="sms:+17026519999">Text</a></span></span></div>
       <div class="row"><span class="label">Shop</span><a class="v" href="https://www.google.com/maps/search/?api=1&amp;query=4300+N+Pecos+Rd+Las+Vegas+NV+89115" target="_blank" rel="noopener">4300 N Pecos Rd<br>Las Vegas, NV 89115</a></div>
       <div class="row"><span class="label">Hours</span><span class="v">Mon–Sat: 8 AM – 5 PM<br>Sunday: Closed</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="location">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Find the shop</h2>
+      <p>4300 N Pecos Rd, Las Vegas, NV 89115. Near I-15 and Craig Rd. Drop-offs Monday to Saturday, 8 AM to 5 PM.</p>
+    </div>
+    <div class="map">
+      <div class="map-fallback"><strong>FM Polishing</strong><span>4300 N Pecos Rd, Las Vegas, NV 89115</span></div>
+      <iframe title="Map showing FM Polishing at 4300 N Pecos Rd, Las Vegas" src="https://www.google.com/maps?q=FM+Polishing,+4300+N+Pecos+Rd,+Las+Vegas,+NV+89115&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="cta map-cta">
+      <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=4300+N+Pecos+Rd,+Las+Vegas,+NV+89115" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn" href="https://maps.apple.com/?daddr=4300+N+Pecos+Rd,+Las+Vegas,+NV+89115" target="_blank" rel="noopener">Open in Apple Maps</a>
+      <a class="btn" href="tel:+17026519999">Call (702) 651-9999</a>
     </div>
   </div>
 </section>
